@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+@import '../base';
+
+$c-inquiry-brown: #b08f51;
+$c-inquiry-blue-light: #0046b7;
+$c-inquiry-blue: #182668;
+$c-inquiry-blue-dark: #0046b7;
+$c-inquiry-red: #ec0000;
+$c-inquiry-red-dark: #c2063f;
+
+body {
+    font-family: $font-stack;
+    font-display: swap;
+    letter-spacing: -0.5px;
+    color: #333;
+}
+
+header,
+.container,
+footer {
+    position: relative;
+}
+
+.container[role=main] {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// --------------------
+// header 영역
+// --------------------
+#landingInquiryPage {
+
+    .lg-wd,
+    .group-f,
+    .group {
+        width: 1100px;
+    }
+
+    .c-brown {
+        color: $c-inquiry-brown !important;
+    }
+
+    .c-blue {
+        color: $c-inquiry-blue !important;
+    }
+
+    .c-blue-light {
+        color: $c-inquiry-blue-light !important;
+    }
+
+    .c-blue-dark {
+        color: $c-inquiry-blue-dark !important;
+    }
+
+    .c-red {
+        color: $c-inquiry-red !important;
+    }
+
+    .c-red-dark {
+        color: $c-inquiry-red-dark !important;
+    }
+
+
+    .wrapper {
+        min-width: 1900px;
+    }
+
+    .landing-header {
+        $line-ht: 6px;
+        // $hd-ht-pc: 80px;
+        $hd-ht-down: $hd-ht-pc - 20;
+        z-index: 10;
+        width: 100%;
+        // min-width: calc(1100px + 400px);
+        // height: $hd-ht;
+        // margin-bottom: $line-ht;
+
+        .gnb {
+            z-index: 10;
+            // @include pos(fixed, 0, 0);
+            position: relative;
+            // background-color: $c-blue;
+            width: 100%;
+            height: $hd-ht-pc;
+            transition: height .3s;
+            box-sizing: border-box;
+            background-color: #fff;
+            // border-bottom: 1px solid #fff;
+
+            .logo-cover {
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                // left: 40px;
+                left: 0px;
+                display: inline-block;
+                height: 100%;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    height: $hd-ht-pc;
+                    vertical-align: middle;
+                }
+
+                .logo {
+                    @include va;
+                }
+            }
+
+            .gnb-area {
+                height: 100%;
+
+                .nav-bar {
+                    // @include flt(right);
+                    // right: 20px;
+                    position: relative;
+                    // margin-right: 40px;
+
+                    .main-nav {
+                        text-align: right;
+
+                        $menu-bd-w: 4px;
+
+                        .menu {
+                            display: inline-block;
+                            vertical-align: top;
+
+                            >li {
+                                position: relative;
+                                display: inline-block;
+                                text-align: center;
+                                font-size: 0;
+                                box-sizing: border-box;
+
+                                &:before {
+                                    content: '';
+                                    display: inline-block;
+                                    height: $hd-ht-pc;
+                                    vertical-align: middle;
+                                }
+
+                                >a {
+                                    @include va;
+                                    // padding: 0 20px;
+                                    margin: 0 20px;
+                                    // @include ft(18px, #fff);
+                                    font-size: 18px;
+                                }
+
+                                &:last-child {
+                                    >a {
+                                        margin-right: 0;
+                                    }
+                                }
+
+                                // &:hover {
+                                //     &:after {
+                                //         content: '';
+                                //         display: block;
+                                //         position: absolute;
+                                //         width: 100%;
+                                //         height: $menu-bd-w;
+                                //         left: 0;
+                                //         bottom: 0;
+                                //         background-color: $primary-color;
+                                //     }
+
+                                //     & .menu2 {
+                                //         display: block;
+                                //     }
+                                // }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .inquiry-tab {
+                position: absolute;
+                right: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 150px;
+                height: 40px;
+                background-color: #fff;
+                border: 1px solid #aaa;
+                font-size: 18px;
+                color: $c-inquiry-brown;
+            }
+        }
+    }
+}

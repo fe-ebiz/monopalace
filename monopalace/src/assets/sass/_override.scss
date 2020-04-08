@@ -1,0 +1,38 @@
+// slick 재정의
+.slick-prev,
+.slick-next {
+    z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: '';
+}
+
+/*
+&.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+.slick-dots {
+    bottom: -25px;
+}
+*/
+.slick-dots li {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+}
+
+.slick-dots li button:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #141414;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button:before {
+    background-color: #141414;
+}

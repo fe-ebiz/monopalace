@@ -1,0 +1,41 @@
+@@include('../inc/_top.html', { "pageName": "sample" })
+
+<main id="container" class="container" role="main">
+    <!-- .sec.pageName-sectionName-sec -->
+    <section class="sec sample-name-sec">
+        <!-- 노출시엔 sr-only 제거 -->
+        <!-- <h1 class="">섹션 제목</h1> -->
+        <h1 class="sr-only">섹션 제목</h1>
+        <div class="name-wrapper">
+            <div class="name-cont">
+                <div class="dropselect-sample">
+                    <div class="dropselect label-text">
+                        <select name="sort">
+                            <option value="createdAt">날짜</option>
+                            <option value="reply_cnt">진행상황</option>
+                        </select>
+                        <button type="button" class="dropbtn drop-toggle" data-toggle="dropmenu">
+                            <span class="in">날짜</span>
+                        </button>
+                        <ul class="dropmenu">
+                            <li class="item">날짜</li>
+                            <li class="item">진행상황</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><br><br><br><br><br>
+                <div class="fileform-sample">
+                    <div class="fileform-wrapper">
+                        <input type="file" class="fileform" name="file" id="file" multiple="multiple">
+                        <label for="file">파일선택</label>
+                        <span class="filename">선택된 파일 없음</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec.main-name-sec -->
+</main>
+<!-- /.main.container -->
+
+@@include('../inc/_bottom.html')
