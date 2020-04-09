@@ -6,7 +6,6 @@
             <h1 id="logo-cover" class="logo-cover">
                 <a href="/" class="logo">
                     <img src="/img/landing/inquiry/logo.png" alt="모노팰리스" class="logo-img">
-                    <span class="sr-only">모노팰리스</span>
                 </a>
             </h1>
 
@@ -15,28 +14,28 @@
                     <h1 class="sr-only">메인메뉴</h1>
                     <ul class="menu cf">
                         <li>
-                            <a href="">상품소개</a>
+                            <a href="#scroll_intro">상품소개</a>
                         </li>
                         <li>
-                            <a href="">분양/임대수익</a>
+                            <a href="#scroll_income">분양/임대수익</a>
                         </li>
                         <li>
-                            <a href="">프리미엄 입지환경</a>
+                            <a href="#scroll_place">프리미엄 입지환경</a>
                         </li>
                         <li>
-                            <a href="">타입 및 특화시설</a>
+                            <a href="#scroll_type">타입 및 특화시설</a>
                         </li>
                         <li>
-                            <a href="">지역개발호재</a>
+                            <a href="#scroll_plan">지역개발호재</a>
                         </li>
                         <li>
-                            <a href="">오시는 길</a>
+                            <a href="#scroll_location">오시는 길</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <button type="button" class="ap-reset inquiry-tab" data-toggle="modal" data-target="" aria-label="문의하기 토글버튼">
+        <button type="button" class="ap-reset inquiry-tab" data-toggle="modal" data-target="inquiry-modal" aria-label="문의하기 토글버튼">
             온라인 문의하기
         </button>
     </div>
@@ -49,7 +48,6 @@
                 <div class="banner">
                     <h1 class="title">
                         <img src="/img/landing/inquiry/visual/title.png" alt="충남아산의 명품 랜드마크 모노팰리스">
-                        <span class="sr-only">충남아산의 명품 랜드마크 모노팰리스</span>
                     </h1>
                     <img src="/img/landing/inquiry/visual/advantages.png" alt="156세대, 최적의 교통환경, 프리미엄 입지환경, 저렴한 분양가, 월세 수익 연 500만원">
                     <img src="/img/landing/inquiry/visual/subtext.png" alt="월세수익 확정 보장받는 수익형상품!">
@@ -58,7 +56,7 @@
                     <div class="title-area">
                         <div class="lg-wd">
                             <img src="/img/landing/inquiry/visual/bar_title.png" alt="5년간 임대수익보장!" class="bar-title">
-                            <a href="" class="bar-btn"><img src="/img/landing/inquiry/visual/bar_btn.png" alt="분양혜택확인"></a>
+                            <a href="#scroll_sale" class="bar-btn"><img src="/img/landing/inquiry/visual/bar_btn.png" alt="분양혜택확인"></a>
                         </div>
                     </div>
                     <div class="number-area">
@@ -69,7 +67,7 @@
         </div>
     </section>
     <!-- /.sec landing inquiry-visual-sec -->
-    <section class="sec landing inquiry-intro-sec">
+    <section class="sec landing inquiry-intro-sec" id="scroll_intro">
         <div class="intro-wrapper">
             <div class="intro-content group-f">
                 <h1 class="title-type1 title">
@@ -126,7 +124,7 @@
         </div>
     </section>
     <!-- /.sec landing inquiry-intro-sec -->
-    <section class="sec landing inquiry-place-sec">
+    <section class="sec landing inquiry-place-sec" id="scroll_place">
         <div class="place-wrapper">
             <div class="place-content group-f">
                 <h1 class="title-type1 title">
@@ -171,7 +169,7 @@
         </div>
     </section>
     <!-- /.sec landing inquiry-premier-sec -->
-    <section class="sec landing inquiry-sale-sec">
+    <section class="sec landing inquiry-sale-sec" id="scroll_sale">
         <div class="sale-wrapper">
             <div class="sale-content group-f">
                 <h1 class="title-type1 title">
@@ -182,13 +180,13 @@
                 </p>
                 <figure class="picture ta-center">
                     <img src="/img/landing/inquiry/sale/img_1.png" alt="수익형상품, 후분양상품, 안정성 UP">
-                    <a href="/img/landing/inquiry/pop_guarantee.jpg" class="guarantee-btn">보증서 확인</a>
+                    <a href="/img/landing/inquiry/pop_guarantee.jpg" rel="prettyPhoto[guarantee]" title="보증서" class="guarantee-btn">보증서 확인</a>
                 </figure>
             </div>
         </div>
     </section>
     <!-- /.sec landing inquiry-sale-sec -->
-    <section class="sec landing inquiry-income-sec">
+    <section class="sec landing inquiry-income-sec" id="scroll_income">
         <div class="income-wrapper">
             <div class="income-content group-f">
                 <h1 class="title-type1 title">
@@ -205,14 +203,14 @@
             </div>
             <div class="banner-content group-f">
                 <p>망설일 이유 없는 확실한 투자처!</p>
-                <p><span class="c-blue-light">월세수익 연 500만원 X 5년 동안</span> <span class="c-red-dark">= 총 2,500만원 지급 보증</span></p>
+                <p><span class="c-blue">월세수익 연 500만원 X 5년 동안</span> <span class="c-red-dark">= 총 2,500만원 지급 보증</span></p>
             </div>
         </div>
         <div class="banner-wrapper">
         </div>
     </section>
     <!-- /.sec landing inquiry-income-sec -->
-    <section class="sec landing inquiry-type-sec">
+    <section class="sec landing inquiry-type-sec" id="scroll_type">
         <div class="type-wrapper">
             <div class="type-content group-f">
                 <h1 class="title-type1 title">
@@ -253,13 +251,32 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="javascript:;" class="gallery-btn">갤러리</a>
+                            <a href="http://img.monopalace.com/photo/big_46a_01.jpg" rel="prettyPhoto[gallery46a_at]" title="46a" class="gallery-btn">갤러리</a>
                             <img src="/img/landing/inquiry/type/fulloption_txt.png" alt="완벽한 풀옵션" class="option-title">
                             <p class="option-text">
                                 드럼세탁기, 원터치 전기 쿡탑, 벽걸이 에어컨, <br>
                                 냉장고(255L), 32인치 LED TV, 아일랜드 식탁, <br>
                                 붙박이장, 천정형 빨래건조대, 블라트 컨텐 등
                             </p>
+                            <!-- 46a -->
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_02.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_03.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_04.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_05.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_06.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_07.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_08.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46a_09.jpg" rel="prettyPhoto[gallery46a_at]" title="46a"></a>
+                            <!-- 46at -->
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_01.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_02.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_03.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_04.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_05.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_06.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_07.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_08.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46at_09.jpg" rel="prettyPhoto[gallery46a_at]" title="46at"></a>
                         </div>
                         <div class="type-picture">
                             <img src="/img/landing/inquiry/type/46a_drawing.png" alt="46a타입">
@@ -296,13 +313,33 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="javascript:;" class="gallery-btn">갤러리</a>
+                            <a href="http://img.monopalace.com/photo/big_46s_01.jpg" rel="prettyPhoto[gallery46s_st]" title="46s" class="gallery-btn">갤러리</a>
                             <img src="/img/landing/inquiry/type/fulloption_txt.png" alt="완벽한 풀옵션" class="option-title">
                             <p class="option-text">
                                 드럼세탁기, 원터치 전기 쿡탑, 벽걸이 에어컨, <br>
                                 냉장고(255L), 32인치 LED TV, 아일랜드 식탁, <br>
                                 붙박이장, 천정형 빨래건조대, 블라트 컨텐 등
                             </p>
+
+                            <!-- 46s -->
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_02.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_03.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_04.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_05.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_06.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_07.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_08.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46s_09.jpg" rel="prettyPhoto[gallery46s_st]" title="46s"></a>
+                            <!-- 46st -->
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_01.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_02.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_03.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_04.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_05.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_06.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_07.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_08.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_46st_09.jpg" rel="prettyPhoto[gallery46s_st]" title="46st"></a>
                         </div>
                         <div class="type-picture">
                             <img src="/img/landing/inquiry/type/46s_drawing.png" alt="46s타입">
@@ -339,13 +376,33 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="javascript:;" class="gallery-btn">갤러리</a>
+                            <a href="http://img.monopalace.com/photo/big_58d_01.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d" class="gallery-btn">갤러리</a>
                             <img src="/img/landing/inquiry/type/fulloption_txt.png" alt="완벽한 풀옵션" class="option-title">
                             <p class="option-text">
                                 드럼세탁기, 원터치 전기 쿡탑, 벽걸이 에어컨, <br>
                                 냉장고(255L), 32인치 LED TV, 아일랜드 식탁, <br>
                                 붙박이장, 천정형 빨래건조대, 블라트 컨텐 등
                             </p>
+
+                            <!-- 46s -->
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_02.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_03.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_04.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_05.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_06.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_07.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_08.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58d_09.jpg" rel="prettyPhoto[gallery58d_dt]" title="58d"></a>
+                            <!-- 46st -->
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_01.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_02.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_03.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_04.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_05.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_06.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_07.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_08.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
+                            <a class="hidden" href="http://img.monopalace.com/photo/big_58dt_09.jpg" rel="prettyPhoto[gallery58d_dt]" title="58dt"></a>
                         </div>
                         <div class="type-picture">
                             <img src="/img/landing/inquiry/type/58d_drawing.png" alt="58d타입">
@@ -353,34 +410,315 @@
                         </div>
                     </li>
                 </ul>
-                <figure class="picture ta-center">
-                    <img src="/img/landing/inquiry/type/img_1.png" alt="">
-                </figure>
             </div>
         </div>
     </section>
     <!-- /.sec landing inquiry-type-sec -->
-    <section class="sec landing inquiry-intro-sec">
-        <div class="intro-wrapper">
-            <div class="intro-content group-f">
+    <section class="sec landing inquiry-prefer-sec">
+        <div class="prefer-wrapper">
+            <div class="prefer-content">
                 <h1 class="title-type1 title">
-                    <img src="/img/landing/inquiry/intro/" alt="">
+                    <img src="/img/landing/inquiry/prefer/title.png" alt="오피스텔형 주택 선호도 2위">
+                </h1>
+                <p class="subtitle-type1 subtitle">
+                    <span class="c-blue">
+                        통계청 자료에 따르면 1인가구는 584만 가구로 1인 가구비율이 29.3%의 비중을 차지하며<br>
+                        그 추세가 계속 증가하고 있습니다.<br>
+                    </span>
+                    이를 반영하듯 아파트나 연립주택과 비교해 주거공간이 쾌적하고<br>
+                    <span class="c-purple">
+                        1~2인 중심 라이프타일이 잘 반영된 오피스텔형 주택 선호도가 높아지고 있으며<br>
+                        특히 모노팰리스와 같이 특화된 최신식 시스템을 적용한 주상복합 소형아파트는<br>
+                        2~40대 직장인, 대학생 층의 선호도가 매우 높습니다.<br>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec landing inquiry-prefer-sec -->
+    <section class="sec landing inquiry-interior-sec">
+        <div class="interior-wrapper">
+            <div class="interior-content group-f">
+                <h1 class="title-type1 title ta-left">
+                    <img src="/img/landing/inquiry/interior/title.png" alt="인테리어">
+                </h1>
+                <figure class="picture ta-center">
+                    <img src="/img/landing/inquiry/interior/img_1.png" alt="전층 복도 테마가 있는 아트갤러리">
+                    <img src="/img/landing/inquiry/interior/img_2.png" alt="심플하고 고급스러운 인테리어">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec landing inquiry-interior-sec -->
+    <section class="sec landing inquiry-system-sec">
+        <div class="system-wrapper">
+            <div class="system-content group-f">
+                <h1 class="title-type1 title ta-left">
+                    <img src="/img/landing/inquiry/system/title.png" alt="특화시스템">
                 </h1>
                 <p class="subtitle-type1 subtitle">
 
                 </p>
                 <figure class="picture ta-center">
-                    <img src="/img/landing/inquiry/intro/img_1.png" alt="">
+                    <img src="/img/landing/inquiry/system/img_1.png" alt="">
                 </figure>
             </div>
         </div>
     </section>
+    <!-- /.sec landing inquiry-system-sec -->
+    <section class="sec landing inquiry-plan-sec" id="scroll_plan">
+        <div class="plan-wrapper">
+            <div class="plan-content group-f">
+                <h1 class="title-type1 title">
+                    <img src="/img/landing/inquiry/plan/title.png" alt="도시계획 및 개발 호재">
+                </h1>
+                <p class="subtitle-type1 subtitle fw-m">
+                    아산시는 지속적인 도시개발로 인구가 꾸준히 상승중이며<br>
+                    <span class="c-blue">기존 삼성디스플레이를 비롯한 대규모 산업단지와 신규 개발호재</span>로 많은 인구집중이 예상되어<br>
+                    풍부한 임대수요를 기대할 수 있습니다.<br>
+                </p>
+                <figure class="picture ta-center">
+                    <img src="/img/landing/inquiry/plan/img_1.png" alt="2030년 아산시 인구목표 차트그래프">
+                </figure>
+                <p class="subtitle-type1 subtitle-2">
+                    아산시는 12년간 평균 3.7%의 인구증가, 세대수는 3.44%의 증가<br>
+                    핵가족화 진행 및 외부 유입 세대 1~2인 세대가 대다수!
+                </p>
+                <figure class="picture d-flex">
+                    <img src="/img/landing/inquiry/plan/img_2.png" alt="2030년 교통망 구성 계획">
+                    <img src="/img/landing/inquiry/plan/img_3.png" alt="아산시 주요계획지표">
+                    <img src="/img/landing/inquiry/plan/img_4.png" alt="아산시 산업단지">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec landing inquiry-plan-sec -->
+    <section class="sec landing inquiry-location-sec" id="scroll_location">
+        <div class="location-wrapper">
+            <div class="location-content group-f">
+                <h1 class="title-type1 title ta-left">
+                    <img src="/img/landing/inquiry/location/title.png" alt="오시는 길">
+                </h1>
+                <div class="map-area">
+                    <div class="map">
+                        <!-- 임시 넣어둠 -->
+                        <!-- * 카카오맵 - 지도퍼가기 -->
+                        <!-- 1. 지도 노드 -->
+                        <div id="daumRoughmapContainer1586397507176" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                        <!-- 3. 실행 스크립트 -->
+                        <script charset="UTF-8">
+                            new daum.roughmap.Lander({
+                                "timestamp": "1586397507176",
+                                "key": "xuog",
+                                "mapWidth": "690",
+                                "mapHeight": "410"
+                            }).render();
+                        </script>
+                    </div>
+                    <img src="http://img.monopalace.com/map_right.jpg" usemap="#map_right">
+                    <div class="map-info">
+                        <map name="map_right" id="map_right">
+                            <area shape="rect" coords="60,286,208,321" href="https://map.kakao.com/etc/print.jsp?c=502377.5,911576.25,3&t=m" target="_blank" alt="약도 출력">
+                            <area shape="rect" coords="214,286,363,320" href="http://map.daum.net/?urlX=502377&amp;urlY=911574&amp;urlLevel=3&amp;itemId=19782641&amp;q=%EB%AA%A8%EB%85%B8%ED%8C%B0%EB%A6%AC%EC%8A%A4&amp;srcid=19782641&amp;map_type=TYPE_MAP" target="_blank" alt="Daum 지도 바로가기">
+                        </map>
+                    </div>
+                </div>
+                <table class="location-tbl">
+                    <colgroup>
+                        <col style="width: 145px">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2">대중교통 이용시</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th height="50"><img src="http://img.monopalace.com/mono/dot.gif" alt="dot"> 지하철</th>
+                            <td>지하철 1호선 온양온천역 하차 (1번출구)후 도보 7분 거리 <a href="http://onyangoncheon.station.ne.kr/info.php" target="_blank" title="온양온천역 지하철 시간표 자세히 보기"><img src="http://img.monopalace.com/info/metro_time.jpg" alt="지하철 시간표 자세히보기"></a></td>
+                        </tr>
+                        <tr>
+                            <th><img src="http://img.monopalace.com/mono/dot.gif" alt="dot"> 시외버스</th>
+                            <td>송악나드리역 도보 1분 거리
+                                <p><img src="http://img.monopalace.com/info/bus_01.jpg" alt="일반">
+                                    100 , 101 , 102 , 110 , 111 , 120 , 130 , 131 , 132 , 133 , 140 , 171 , 172 , 174 , 175 , 180 , 303, 810 , 820 , 830 , 840</p>
+                                <p style="margin-left:27px">900 , 901 , 910 , 911 , 920 , 921 , 930 , 931 </p>
+                                <img src="http://img.monopalace.com/info/bus_02.jpg" alt="좌석"> 500 , 501 , 510 , 511 , 512 , 530 , 531 , 540 , 560
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec landing inquiry-location-sec -->
+    <!-- <section class="sec landing inquiry-intro-sec">
+        <div class="intro-wrapper">
+            <div class="intro-content group-f">
+                <h1 class="title-type1 title">
+                    <img src="/img/landing/inquiry/intro/title.png" alt="">
+                </h1>
+                <p class="subtitle-type1 subtitle">
+
+                </p>
+                <figure class="picture ta-center">
+                </figure>
+            </div>
+        </div>
+    </section> -->
     <!-- /.sec landing inquiry-intro-sec -->
 </main>
 <!-- /.main.container -->
 
-<footer class="landing-footer">
+<div id="footer" class="landing-footer cf">
+    <div id="f_contents" class="cf">
+        <h2><img src="http://img.monopalace.com/footer_logo.gif" alt="모노팰리스"></h2>
+        <p class="address">
 
-</footer>
+            <span class="tel">임대입주문의 041)585-0003 | 충청남도 아산시 온천동 74-5번지<a href="/home/inquiry/" title="임대예약"><img src="http://img.monopalace.com/reser_btn.gif" alt="임대예약" style="margin-top:-2px;margin-left:5px"></a></span><br>
+            대표이사 박기범 | 사업자등록번호 220-87-30865 | TEL 02)6255-3013 | FAX 041)545-0545<br>
+            서울특별시 강남구 테헤란로82길 15, 14층(대치동, 디아이타워) | E-mail <a href="mailto:monopalace@ebiznetworks.co.kr">monopalace@ebiznetworks.co.kr</a><br>
+
+            COPYRIGHT 2014 BY <span class="footer_mono">MONOPALACE</span> CO.,LTD ALL RIGHTS RESERVED. <br>
+
+            <img src="http://img.monopalace.com/footer_text.gif" alt="본 홈페이지에 사용된 투시도 및 이미지 등은 소비자의 이해를 돕기 위한 이미지 컷으로 차이가 있습니다. 하자 등에 대한 피해보상은 주택업 관련 규정에 따라 적용됩니다.">
+        </p>
+        <h3><a href="http://www.ebiznetworks.co.kr/" target="_blank" title="이비즈네트웍스"><img src="http://img.monopalace.com/ebiz_logo.gif" alt="이비즈네트웍스"></a>
+
+        </h3>
+        <!---------------------------family --------------------------->
+        <div id="family_site">
+            <div class="fam_btn_m" style="width:120px; padding:0;">
+                <a href="javascript:;" onclick="$('#family_list').toggle()">
+                    &nbsp;Family Site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲
+                </a>
+            </div>
+            <ul id="family_list" style="width: 120px; display: none;" class="">
+                <li style="margin-top:10px;">
+                    <div class="fam_btn" style="font-weight:bold; color:#111111">[ 부동산 ]</div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.monotower.com/" target="_blank">모노타워</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><b style="color:#ff0000">모노팰리스</b></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://partners.monopalace.com" target="_blank">모노팰리스 파트너스</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.enasset.co.kr" target="_blank">이엔자산개발</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.ditower.co.kr" target="_blank">DI타워</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.onbiz.co.kr/" target="_blank">온비즈 오피스</a></div>
+                </li>
+                <li style="margin-top:10px;">
+                    <div class="fam_btn" style="font-weight:bold; color:#111111">[ 커머스 ]</div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.nurisoop.co.kr" target="_blank">누리숲</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.entv.co.kr" target="_blank">이엔티비</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.ssenflower.co.kr" target="_blank">쎈플라워</a></div>
+                </li>
+                <li style="margin-top:10px;">
+                    <div class="fam_btn" style="font-weight:bold; color:#111111">[ 서비스 ]</div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.ancamera.co.kr/home/download_01.html" target="_blank">안카메라</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.ancamera.co.kr/home/download_02.html" target="_blank">안캠코더</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.startools.co.kr" target="_blank">별툴즈</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.badakencoder.com" target="_blank">바닥툴즈</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.pcclear.co.kr" target="_blank">피씨클리어</a></div>
+                </li>
+                <li>
+                    <div class="fam_btn"><a href="http://www.ebiznetworks.co.kr" target="_blank">이비즈네트웍스</a></div>
+                </li>
+            </ul>
+        </div>
+        <!---------------------------family --------------------------->
+    </div>
+</div>
+
+<div class="bottombar-wrapper" id="bottombarWrapper" style="display: none">
+    <div class="title-area">
+        <div class="lg-wd">
+            <img src="/img/landing/inquiry/bottombar_title.png" alt="5년간 임대수익보장!" class="bar-title">
+            <a href="#scroll_sale" class="bar-btn"><img src="/img/landing/inquiry/bottombar_btn.png" alt="분양혜택확인"></a>
+        </div>
+    </div>
+    <div class="number-area">
+        <img src="/img/landing/inquiry/bottombar_inquiry_number.png" alt="분양문의 041 585 0003">
+    </div>
+</div>
+
+<aside class="quick-menu" id="quickMenu" style="display: none">
+    <h2 class="logo"><img src="/img/landing/inquiry/logo.png" alt="모노팰리스"></h2>
+    <ul class="menu">
+        <li class="on"><a href="#scroll_intro"><span class="in">상품소개</span></a></li>
+        <li><a href="#scroll_income"><span class="in">분양/임대수익</span></a></li>
+        <li><a href="#scroll_place"><span class="in">프리미엄<br>입지환경</span></a></li>
+        <li><a href="#scroll_type"><span class="in">타입 및 특화시설</span></a></li>
+        <li><a href="#scroll_plan"><span class="in">지역개발호재</span></a></li>
+        <li><a href="#scroll_location"><span class="in">오시는 길</span></a></li>
+        <li class="inquiry"><a href="javascript:;" data-toggle="modal" data-target="inquiry-modal"><span class="in">온라인 문의</span></a></li>
+    </ul>
+    <div class="top-btn-cover">
+        <a href="javascript:;" class="top-btn" role="button" onclick="$( 'html, body' ).animate( { scrollTop : 0 }, 400 )">
+            <img src="/img/landing/inquiry/go_top.png" alt="위로">
+        </a>
+    </div>
+</aside>
+
+<div class="modal modal-mask scale-no bg-no inquiry-modal" role="dialog" aira-modal="true" tabindex="-1">
+    <div class="modal-wrapper">
+        <div class="modal-container">
+            <form action="">
+                <div class="modal-header">
+                    <img src="/img/landing/inquiry/modal/inquiry_title.png" alt="모노팰리스 분양문의">
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>이름</label>
+                        <input type="text" class="form-input name">
+                    </div>
+                    <div class="form-group">
+                        <label>연락처</label>
+                        <input type="text" class="form-input phone" placeholder="- 없이 입력해주세요.">
+                    </div>
+                    <div class="form-group">
+                        <label>문의내용</label>
+                        <textarea name="" id="" cols="30" rows="10" class="form-textarea" placeholder="문의사항을 간략하게 작성해주시면 전화로 안내드리겠습니다."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="ap-reset inquiry-btn">문의하기</button>
+                    <a href="javascript:;" data-dismiss="modal" class="close-btn">
+                        <span class="x">&times;</span>
+                        <span class="txt">닫기</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /.modal-fstvisit -->
 
 @@include('../inc/_foot.html')

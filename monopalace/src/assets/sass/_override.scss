@@ -36,3 +36,82 @@
 .slick-dots li.slick-active button:before {
     background-color: #141414;
 }
+
+/* prettyPhoto 재정의*/
+div.ppt,
+.pp_top,
+.pp_bottom {
+    display: none !important;
+}
+
+div.pp_default .pp_content_container .pp_left,
+div.pp_default .pp_content_container .pp_right {
+    background: none !important;
+}
+
+div.pp_default .pp_nav {
+    margin-left: 6px !important;
+    top: -2px !important;
+    z-index: 1 !important;
+    width: auto;
+    padding-right: 30px;
+}
+
+div.pp_default .pp_close {
+    margin-right: 5px !important;
+}
+
+div.pp_default .pp_description {
+    position: relative;
+    top: 4px !important;
+    margin-left: 10px;
+}
+
+div.pp_default .pp_content {
+    border: 4px solid #fff;
+    border-bottom-width: 2px;
+}
+
+div.pp_default .pp_nav .currentTextHolder {
+    font-family: 'Nanum Gothic', sans-serif !important;
+    font-style: normal !important;
+}
+
+a.pp_previous,
+a.pp_next {
+    position: absolute;
+}
+
+a.pp_previous {
+    left: -85px;
+}
+
+a.pp_next {
+    right: -85px;
+}
+
+a.pp_previous,
+div.pp_default .pp_previous:hover {
+    background: url('http://img.ocean2you.co.kr/renew/btn_prev02.png') center left no-repeat !important;
+}
+
+a.pp_next,
+div.pp_default .pp_next:hover {
+    background: url('http://img.ocean2you.co.kr/renew/btn_next02.png') center right no-repeat !important;
+}
+
+div.pp_overlay {
+    opacity: 0.7 !important;
+}
+
+div.pp_overlay:after {
+    display: block;
+    content: '';
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background: url('http://img.ocean2you.co.kr/renew/btn_close02.png') no-repeat;
+    cursor: pointer;
+}

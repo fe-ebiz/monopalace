@@ -4,7 +4,6 @@ $(function () {
 
     tabsFn()
     dataFn();
-    if ($('#landingInquiryPage').length) landingInquiry.init();
     // common.init();
 });
 
@@ -144,58 +143,252 @@ var common = {
     },
 }
 
-// landingInquiry
-var landingInquiry = {
+// mainUI
+var main = {
     init: function () {
-        this.scroll();
-        this.inquiryPrettyPhoto();
+        // this.wayPoint();
+        this.visualBannerList();
+        this.visualTvListFn();
+        // this.newsbarNewsList()
+        // this.guideVideoList()
+        // this.roadmapList()
+        // this.newsList()
+        // main.load();
+        // main.visualActions();
+        // main.facilityPictureList();
+        // main.lookCardList();
     },
-    scroll: function () {
-        // var gnb = $('#gnb');
-        // var goTop = $('#goTop');
-        // var headerHt = gnb.outerHeight();
-        // console.log(headerHt);
-        var isQuickShow = false;
-        var $quickMenu = $('#quickMenu');
-        var $bottombarWrapper = $('#bottombarWrapper');
-        $(window).on('scroll', function () {
-            var scr = $(window).scrollTop();
-            var introOffsetTop = $('#scroll_intro').offset().top;
-            if (scr > introOffsetTop) {
-                // isQuickShow = true;
-                if (!isQuickShow) {
-                    isQuickShow = true;
-                    $quickMenu.fadeIn('fast');
-                    $bottombarWrapper.fadeIn('fast');
-                }
-            } else {
-                if (isQuickShow) {
-                    isQuickShow = false;
-                    $quickMenu.fadeOut('fast');
-                    $bottombarWrapper.fadeOut('fast');
-                }
-            }
+    visualBannerList: function () {
+        $('#visualBannerList').slick({
+            // autoplay: true,
+            autoplaySpeed: 5000,
+            appendArrows: '#bannerArrow',
+            pauseOnHover: false,
+            // prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
+            // nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
+            // infinite: false,
         });
     },
-    inquiryPrettyPhoto: function () {
+    visualTvListFn: function () {
+        $('#visualBannerList .visualTvList').slick({
+            autoplay: true,
+            autoplaySpeed: 5000,
+            appendArrows: '#bannerArrow',
+            pauseOnHover: false,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            infinite: false,
+            swipe: false,
+            // centerMode: true,
+            // prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
+            // nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
+        });
+    },
+    newsbarNewsList: function () {
+        $('#newsbarNewsList').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            vertical: true,
+            pauseOnHover: false,
+            prevArrow: '',
+            nextArrow: ''
+            // infinite: false,
+        });
+    },
+    guideVideoList: function () {
+        $('#guideVideoList').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 4,
+            prevArrow: '',
+            nextArrow: '',
+            // infinite: false,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }],
+        });
+    },
+    roadmapList: function () {
+        $('#roadmapList').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            infinite: false,
+            pauseOnHover: false,
+            prevArrow: '',
+            nextArrow: '',
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ],
+        });
+    },
+    newsList: function () {
+        $('[id*=newsList-]').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            vertical: true,
+            prevArrow: '',
+            nextArrow: ''
+            // infinite: false,
+        });
+    },
+    lookCardList: function () {
+        $('#lookCardList').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            centerMode: true,
+            centerPadding: '100px',
+            slidesToShow: 3,
+            // slidesToShow: 'auto',
+            infinite: true,
+            // infinite: false,
+            responsive: [{
+                    breakpoint: 1360,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '100px',
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '60px',
+                        slidesToShow: 1,
+                    }
+                },
+            ],
+        });
+    },
+    wayPoint: function () {
+        $('#container .wayp-item').each(function (index, item) {
+            $(item).addClass('blind');
+            $(item).waypoint(
+                function () {
+                    $(item).addClass('animated fadeInUp');
+                }, {
+                    offset: '70%',
+                }
+            );
+        });
+        $('#container .wayp-item-left').each(function (index, item) {
+            $(item).addClass('blind');
+            $(item).waypoint(
+                function () {
+                    $(item).addClass('animated fadeInLeft');
+                }, {
+                    offset: '70%',
+                }
+            );
+        });
+        $('#container .wayp-item-right').each(function (index, item) {
+            $(item).addClass('blind');
+            $(item).waypoint(
+                function () {
+                    $(item).addClass('animated fadeInRight');
+                }, {
+                    offset: '70%',
+                }
+            );
+        });
+        // $('#container .wayp-slider').each(function (index, item) {
+        //     $(item).waypoint(
+        //         function () {
+        //             // this.newsbarNewsList()
+        //             // this.guideVideoList()
+        //             // this.roadmapList()
+        //             // this.newsList()
+        //         }, {
+        //             offset: '70%',
+        //         }
+        //     );
+        // });
+    },
+}
 
-        $("a[rel^='prettyPhoto[gallery']").prettyPhoto({
-            autoplay_slideshow: true,
-            animation_speed: 'fast',
-            slideshow: 3000,
-            social_tools: '',
-            opacity: 0.30,
-            // allow_resize: true
-            //show_title: true,
-            //default_width: 500
-        });
-        $("a[rel^='prettyPhoto[guarantee]']").prettyPhoto({
-            // autoplay_slideshow: true,
-            animation_speed: 'fast',
-            // slideshow: 3000,
-            social_tools: '',
-            opacity: 0.30,
-            // allow_resize: true,
+// faqUI
+var faq = {
+    init: function () {
+        // this.faqTabFn();
+        this.faqListTabFn();
+    },
+    faqTabFn: function () {
+        toggleOn($('#faqPage .faq-sec [data-role=toggleOn] .btn'));
+    },
+    faqListTabFn: function () {
+        toggleOn($('#faqList .faq-item'));
+    }
+}
+// prdDetailUI
+var prdDetail = {
+    init: function () {
+        this.scrollFn();
+        this.scrollLinkFn();
+        this.productListFn();
+    },
+    data: function () {
+        var hdHtDown = 60;
+        var allmenuHt = $('#header .allmenu-wrapper').outerHeight();
+        var entvProductContentHt = $('#entvProductContent').outerHeight();
+        return {
+            hdHtDown,
+            allmenuHt,
+            entvProductContentHt
+        }
+    },
+    scrollFn: function () {
+        var $entvProductContent = $('#entvProductContent');
+        // var allmenuHt = $('#header .allmenu-wrapper').outerHeight();
+        if ($entvProductContent.length) {
+            var thisTop = $entvProductContent.offset().top - this.data().allmenuHt - 20;
+            $(window).on('scroll', function () {
+                var scr = $(window).scrollTop();
+                if (scr > thisTop) {
+                    $entvProductContent.addClass('affix');
+                } else {
+                    $entvProductContent.removeClass('affix');
+                }
+            });
+        }
+    },
+    scrollLinkFn: function () {
+        var ht = this.data().entvProductContentHt + this.data().allmenuHt;
+        var $entvTitle = $('#entvTitle');
+        $entvTitle.find('.spec-btn').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').stop().scrollTop($($(this).attr('href')).offset().top - ht);
+        })
+    },
+    productListFn: function () {
+        $('#entvProductList').slick({
+            // autoplay: true,
+            autoplaySpeed: 5000,
+            appendArrows: '#bannerArrow',
+            pauseOnHover: false,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            infinite: false,
+            // centerMode: true,
+            // prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
+            // nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
         });
     }
 }
