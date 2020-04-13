@@ -125,7 +125,8 @@ img.bor {
 }
 
 .form-group {
-    margin-bottom: 0 !important;
+    // margin-bottom: 0 !important;
+    margin-bottom: 0;
 }
 
 .form-textarea,
@@ -133,9 +134,10 @@ img.bor {
     @include form-base;
 }
 
+.lg-wd,
 .group-f,
 .group {
-    width: $screen-lg-width;
+    // width: $screen-lg-width;
 }
 
 // .group {
@@ -352,12 +354,17 @@ a.btn>* {
     font-family: $font-jfss !important;
 }
 
-.fw-b {
-    font-weight: 700 !important;
-}
 
 .fw-n {
     font-weight: 400 !important;
+}
+
+.fw-m {
+    font-weight: 500 !important;
+}
+
+.fw-b {
+    font-weight: 700 !important;
 }
 
 .ta-center {
@@ -528,6 +535,15 @@ a.btn>* {
     background-color: rgba(0, 0, 0, .5);
     display: table;
     transition: opacity .3s ease;
+
+    &.popup,
+    &.scale-no {
+        transition: initial;
+    }
+
+    &.bg-no {
+        background-color: transparent !important;
+    }
 }
 
 .pop-wrapper,
@@ -581,6 +597,13 @@ a.btn>* {
 .modal.leave .modal-container {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
+}
+
+.modal.popup .modal-container,
+.modal.scale-no .modal-container,
+.modal.leave.scale-no .modal-container {
+    transform: scale(1);
+    -webkit-transform: scale(1);
 }
 
 // .modal-enter {
