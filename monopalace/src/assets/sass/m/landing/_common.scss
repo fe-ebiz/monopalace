@@ -4,7 +4,8 @@
 
 $c-inquiry-brown: #b08f51;
 $c-inquiry-blue: #0046b7;
-$c-inquiry-blue-dark: #182668;
+// $c-inquiry-blue-dark: #182668;
+$c-inquiry-blue-dark: #0c0c68;
 $c-inquiry-red: #ec0000;
 $c-inquiry-red-dark: #c2063f;
 $c-inquiry-purple: #cc0099;
@@ -34,6 +35,11 @@ footer {
 // header 영역
 // --------------------
 #landingInquiryPage {
+
+    .wrapper {
+        max-width: 375px;
+        margin: 0 auto;
+    }
 
     .lg-wd,
     .group-f,
@@ -72,12 +78,6 @@ footer {
 
     .c-purple {
         color: $c-inquiry-purple !important;
-    }
-
-
-    .wrapper {
-        max-width: 360px;
-        margin: 0 auto;
     }
 
     .landing-header {
@@ -140,23 +140,18 @@ footer {
                         // overflow: hidden;
                         overflow-x: scroll;
 
-                        &::-webkit-scrollbar {
-                            display: none;
-                        }
+                        // &::-webkit-scrollbar {
+                        //     display: none;
+                        // }
 
                         .menu {
-                            padding: 0px 2.5px;
-                            // margin-right: 51.5px;
-                            // padding-right: 51.5px;
-                            // padding-left: 2.5px;
-                            // width: 580px;
                             display: flex;
                             flex-wrap: nowrap;
 
                             >li {
                                 flex-shrink: 0;
                                 position: relative;
-                                margin: 0 7.5px;
+                                margin: 0 6px;
                                 font-size: 14px;
 
                                 >a {
@@ -165,10 +160,15 @@ footer {
                                     height: $gnb-area-ht;
                                     line-height: $gnb-area-ht;
                                     font-weight: 700;
+                                    letter-spacing: -1px;
                                 }
 
                                 &.on>a {
                                     color: $c-inquiry-brown;
+                                }
+
+                                &:last-child>a {
+                                    padding-right: 50px;
                                 }
                             }
                         }
@@ -197,7 +197,58 @@ footer {
                     }
 
                     .allmenu {
-                        display: none;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        padding-bottom: 20px;
+                        background-color: #ffffff;
+
+                        .menu-list {
+                            position: relative;
+                            left: -2px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            >a:not(.close-btn) {
+                                position: relative;
+                                margin: 0 6px;
+                                font-size: 14px;
+                                line-height: $gnb-area-ht;
+                                font-weight: 700;
+                                letter-spacing: -1px;
+
+                                &:nth-child(4)~a:not(.close-btn) {
+                                    margin-top: -12px;
+                                }
+
+                                &.on {
+                                    color: $c-inquiry-brown;
+                                }
+                            }
+                        }
+
+
+                        .close-btn {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            display: flex;
+                            align-items: center;
+                            padding: 0 10px;
+                            height: 28px;
+                            background-color: #888888;
+                            color: #ffffff;
+                            font-size: 11.5px;
+                            font-weight: 300;
+
+                            .x {
+                                margin-right: 5px;
+                                font-size: 16px;
+                                font-weight: 100;
+                            }
+                        }
                     }
                 }
 

@@ -115,3 +115,51 @@ div.pp_overlay:after {
     background: url('http://img.ocean2you.co.kr/renew/btn_close02.png') no-repeat;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+
+    div.pp_default .pp_expand {
+        display: none !important;
+    }
+
+    // div.pp_default .pp_expand,
+    // a.pp_previous,
+    // div.pp_default .pp_previous,
+    // a.pp_next,
+    // div.pp_default .pp_next {
+    //     display: none !important;
+    // }
+
+    // *[class~=pp_pic_holder] {
+    //     width: 100% !important;
+    //     left: 0px !important;
+    // }
+
+    // *[class~=pp_hoverContainer] {
+    //     width: 90% !important;
+    //     height: 180px !important;
+    // }
+
+    // *[class~=pp_fade] {
+    //     width: 320px !important;
+    // }
+
+    // *[class~=pp_hoverContainer] {
+    //     height: 190px !important;
+    // }
+
+    // *[class~=pp_right] {
+    //     height: 220px !important;
+    // }
+
+    // *[class~=pp_content] {
+    //     height: 100% !important;
+    //     width: 320px !important;
+    // }
+
+    // #fullResImage {
+    //     height: 100% !important;
+    //     width: 320px !important;
+    // }
+
+}
