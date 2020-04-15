@@ -37,14 +37,19 @@ footer {
 #landingInquiryPage {
 
     .wrapper {
-        max-width: 375px;
-        margin: 0 auto;
+        // max-width: 375px;
+        // margin: 0 auto;
     }
 
     .lg-wd,
     .group-f,
     .group {
         // width: 1100px;
+    }
+
+    .pd-m {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
     .group {
@@ -129,20 +134,33 @@ footer {
 
                 }
 
+                $nav-bar-ht: 45px;
+
+                .nav-bar-wrapper {
+                    height: $nav-bar-ht;
+                }
+
                 .nav-bar {
-                    $gnb-area-ht: 45px;
-                    height: $gnb-area-ht;
+                    $nav-bar-ht: 45px;
+                    height: $nav-bar-ht;
                     position: relative;
 
-                    .main-nav {
-                        width: 100%;
-                        // width: 300px;
-                        // overflow: hidden;
-                        overflow-x: scroll;
+                    &.affix {
+                        top: 0;
+                        left: 0;
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+                    }
 
-                        // &::-webkit-scrollbar {
-                        //     display: none;
-                        // }
+                    .main-nav {
+                        position: relative;
+                        width: 100%;
+                        height: $nav-bar-ht;
+                        overflow-x: scroll;
+                        background-color: #ffffff;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
 
                         .menu {
                             display: flex;
@@ -151,16 +169,16 @@ footer {
                             >li {
                                 flex-shrink: 0;
                                 position: relative;
-                                margin: 0 6px;
+                                margin: 0 8px;
                                 font-size: 14px;
 
                                 >a {
                                     position: relative;
                                     display: block;
-                                    height: $gnb-area-ht;
-                                    line-height: $gnb-area-ht;
+                                    height: $nav-bar-ht;
+                                    line-height: $nav-bar-ht;
                                     font-weight: 700;
-                                    letter-spacing: -1px;
+                                    letter-spacing: -1.5px;
                                 }
 
                                 &.on>a {
@@ -206,26 +224,32 @@ footer {
 
                         .menu-list {
                             position: relative;
-                            left: -2px;
+                            left: -1.5px;
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: center;
+                            padding: 7px 0;
 
                             >a:not(.close-btn) {
                                 position: relative;
-                                margin: 0 6px;
+                                margin: 0 8px;
                                 font-size: 14px;
-                                line-height: $gnb-area-ht;
+                                // line-height: $nav-bar-ht;
+                                line-height: 2.2;
                                 font-weight: 700;
-                                letter-spacing: -1px;
+                                letter-spacing: -1.5px;
 
-                                &:nth-child(4)~a:not(.close-btn) {
-                                    margin-top: -12px;
-                                }
+                                // @include screen-xxs {
+                                //     font-size: 12px;
+                                // }
 
                                 &.on {
                                     color: $c-inquiry-brown;
                                 }
+                            }
+
+                            @include screen-min(375px) {
+                                left: -8.5px;
                             }
                         }
 
@@ -362,6 +386,19 @@ footer {
             display: block;
             margin-top: 30px;
             text-align: center;
+        }
+    }
+
+    .btm-rt-shorcut {
+        z-index: 20;
+        position: fixed;
+        right: 10px;
+        bottom: 60px;
+
+        .top-btn-cover {
+            display: block;
+            width: 40px;
+            opacity: .8;
         }
     }
 

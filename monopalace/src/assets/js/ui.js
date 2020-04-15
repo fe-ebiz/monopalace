@@ -165,14 +165,14 @@ var landingInquiry = {
                 // isQuickShow = true;
                 if (!isQuickShow) {
                     isQuickShow = true;
-                    $quickMenu.fadeIn('fast');
-                    $bottombarWrapper.fadeIn('fast');
+                    $quickMenu.fadeToggle('fast');
+                    $bottombarWrapper.fadeToggle('fast');
                 }
             } else {
                 if (isQuickShow) {
                     isQuickShow = false;
-                    $quickMenu.fadeOut('fast');
-                    $bottombarWrapper.fadeOut('fast');
+                    $quickMenu.fadeToggle('fast');
+                    $bottombarWrapper.fadeToggle('fast');
                 }
             }
         });

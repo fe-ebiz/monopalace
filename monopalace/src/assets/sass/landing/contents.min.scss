@@ -1,5 +1,5 @@
-@import './landing/common';
-@import './override';
+@import './common';
+@import '../override';
 
 .sec.landing {
     .title-type1 {
@@ -22,7 +22,7 @@
                 .banner {
                     height: 715px;
                     padding-top: 60px;
-                    background: url(/img/landing/inquiry/visual/bg.png) no-repeat center top / cover;
+                    background: url(http://img.monopalace.com/landing/inquiry/visual/bg.png) no-repeat center top / cover;
                     box-sizing: border-box;
                     text-align: center;
 
@@ -174,7 +174,7 @@
 
     &.inquiry-sale-sec {
         // background-color: #1F1F77;
-        background: url(/img/landing/inquiry/sale/ptn.jpg) repeat;
+        background: url(http://img.monopalace.com/landing/inquiry/sale/ptn.jpg) repeat;
 
         // background-color: #191967;
         .sale-wrapper {
@@ -374,7 +374,7 @@
             justify-content: center;
             height: 460px;
             box-sizing: border-box;
-            background: url(/img/landing/inquiry/prefer/bg.png) no-repeat center / cover;
+            background: url(http://img.monopalace.com/landing/inquiry/prefer/bg.png) no-repeat center / cover;
 
             .prefer-content {
                 padding: 15px 62px 35px;
@@ -433,7 +433,11 @@
                     justify-content: space-between;
 
                     .picture {
-                        width: 540px;
+                        position: relative;
+
+                        &:not(.type2) {
+                            width: 540px;
+                        }
 
                         .text {
                             margin-top: 25px;
@@ -441,11 +445,25 @@
                             line-height: 1.3;
                             letter-spacing: -1px;
                         }
+
+                        &.type2 {
+                            .text {
+                                margin-top: 0;
+                                position: absolute;
+                                left: 0px;
+                                bottom: 0px;
+                                width: 100%;
+                                padding: 20px 50px;
+                                box-sizing: border-box;
+                                background-color: rgba(255, 255, 255, 0.85);
+                            }
+                        }
                     }
 
                     .mt {
                         margin-top: 60px;
                     }
+
                 }
             }
         }

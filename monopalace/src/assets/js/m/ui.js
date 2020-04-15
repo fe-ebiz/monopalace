@@ -149,6 +149,7 @@ var landingInquiry = {
     init: function () {
         this.scroll();
         this.inquiryPrettyPhoto();
+        this.premierPictureList();
     },
     scroll: function () {
         // var gnb = $('#gnb');
@@ -156,8 +157,10 @@ var landingInquiry = {
         // var headerHt = gnb.outerHeight();
         // console.log(headerHt);
         var isQuickShow = false;
-        var $quickMenu = $('#quickMenu');
+        var isNavBarShow = false;
+        var $btmRtShortcut = $('#btmRtShortcut');
         var $bottombarWrapper = $('#bottombarWrapper');
+        var $navBar = $('#navBar');
         $(window).on('scroll', function () {
             var scr = $(window).scrollTop();
             var introOffsetTop = $('#scroll_intro').offset().top;
@@ -165,20 +168,33 @@ var landingInquiry = {
                 // isQuickShow = true;
                 if (!isQuickShow) {
                     isQuickShow = true;
-                    $quickMenu.fadeIn('fast');
-                    $bottombarWrapper.fadeIn('fast');
+                    $btmRtShortcut.fadeToggle('fast');
+                    $bottombarWrapper.fadeToggle('fast');
                 }
             } else {
                 if (isQuickShow) {
                     isQuickShow = false;
-                    $quickMenu.fadeOut('fast');
-                    $bottombarWrapper.fadeOut('fast');
+                    $btmRtShortcut.fadeToggle('fast');
+                    $bottombarWrapper.fadeToggle('fast');
+                }
+            }
+            var mainOffsetTop = $('main#container').offset().top;
+            if (scr > mainOffsetTop) {
+                if (!isNavBarShow) {
+                    isNavBarShow = true;
+                    $navBar.toggle();
+                    $navBar.toggleClass('affix');
+                    $navBar.fadeToggle('fast');
+                }
+            } else {
+                if (isNavBarShow) {
+                    isNavBarShow = false;
+                    $navBar.toggleClass('affix');
                 }
             }
         });
     },
     inquiryPrettyPhoto: function () {
-
         $("a[rel^='prettyPhoto[gallery']").prettyPhoto({
             autoplay_slideshow: true,
             animation_speed: 'fast',
@@ -197,7 +213,19 @@ var landingInquiry = {
             opacity: 0.30,
             // allow_resize: true,
         });
-    }
+    },
+    premierPictureList: function () {
+        $('#premierPictureList').slick({
+            // autoplay: true,
+            centerMode: true,
+            slidesToShow: 1,
+            centerPadding: '60px',
+            infinite: false,
+            dots: true,
+            prevArrow: '',
+            nextArrow: '',
+        });
+    },
 }
 
 var targetHide = {
