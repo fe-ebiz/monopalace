@@ -179,7 +179,7 @@ var landingInquiry = {
         });
     },
     quickMenuToggle: function() {
-        $('body').on('click', '#quickMenu .menu > li', function() {
+        $('body').on('click', '#quickMenu .menu > li:not(.inquiry)', function() {
             $(this).toggleClass('on').siblings().removeClass('on');
             // console.log('work');
         });
