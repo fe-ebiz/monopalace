@@ -219,7 +219,7 @@ var landingInquiry = {
             // autoplay: true,
             centerMode: true,
             slidesToShow: 1,
-            centerPadding: '60px',
+            centerPadding: '45px',
             infinite: false,
             dots: true,
             prevArrow: '',

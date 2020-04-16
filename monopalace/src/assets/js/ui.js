@@ -160,7 +160,7 @@ var landingInquiry = {
         var $bottombarWrapper = $('#bottombarWrapper');
         $(window).on('scroll', function () {
             var scr = $(window).scrollTop();
-            var introOffsetTop = $('#scroll_intro').offset().top;
+            var introOffsetTop = $('#scroll_intro').offset().top - 5;
             if (scr > introOffsetTop) {
                 // isQuickShow = true;
                 if (!isQuickShow) {

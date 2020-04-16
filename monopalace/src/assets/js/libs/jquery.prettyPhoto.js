@@ -53,7 +53,7 @@
 
         function l(e, t) {
             if (resized = !1, d(e, t), imageWidth = e, imageHeight = t, (k > j || b > I) && doresize && settings.allow_resize && !$) {
-                for (resized = !0, fitting = !1; !fitting;) k > j ? (imageWidth = j - 30, imageHeight = t / e * imageWidth) : b > I ? (imageHeight = I - 30, imageWidth = e / t * imageHeight) : fitting = !0, b = imageHeight, k = imageWidth;
+                for (resized = !0, fitting = !1; !fitting;) k > j ? (imageWidth = j - 40, imageHeight = t / e * imageWidth) : b > I ? (imageHeight = I - 40, imageWidth = e / t * imageHeight) : fitting = !0, b = imageHeight, k = imageWidth;
                 (k > j || b > I) && l(k, b), d(imageWidth, imageHeight)
             }
             return {
