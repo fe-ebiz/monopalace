@@ -305,18 +305,24 @@ footer {
         }
 
         .footer-area {
-            padding: 20px 0 30px;
+            padding: 15px 0 70px;
             background-color: #efefef;
             font-weight: 300;
         }
 
         .address {
-            font-size: 12.5px;
+            font-size: 11px;
+
+            .inquiry {
+                margin-bottom: 5px;
+                font-size: 12.5px;
+                font-weight: 500;
+            }
         }
 
         .copyright {
             display: block;
-            margin-top: 15px;
+            margin-top: 10px;
             font-size: 11px;
         }
     }
