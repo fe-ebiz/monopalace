@@ -161,8 +161,8 @@ var landingInquiry = {
         var $bottombarWrapper = $('#bottombarWrapper');
         $(window).on('scroll', function () {
             var scr = $(window).scrollTop();
-            var introOffsetTop = $('#scroll_intro').offset().top - 1;
-            if (scr > introOffsetTop) {
+            var quickShotTop = $('main .inquiry-visual-sec').offset().top + $('main .inquiry-visual-sec').outerHeight() - 1;
+            if (scr > quickShotTop) {
                 // isQuickShow = true;
                 if (!isQuickShow) {
                     isQuickShow = true;
@@ -180,30 +180,30 @@ var landingInquiry = {
     },
     quickMenuToggle: function() {
         $('body').on('click', '#quickMenu .menu > li:not(.inquiry)', function() {
-            $(this).toggleClass('on').siblings().removeClass('on');
+            $(this).addClass('on').siblings().removeClass('on');
             // console.log('work');
         });
         var $intro = $('#scroll_intro');
         var $sale = $('#scroll_sale');
-        var $place = $('#scroll_place');
+        var $premier = $('#scroll_premier');
         var $type = $('#scroll_type');
         var $plan = $('#scroll_plan');
         var $location = $('#scroll_location');
         $(window).on('scroll', function () {
             var scr = $(window).scrollTop();
-            if (scr > $intro.offset().top - 1 && scr < $intro.next().offset().top) {
+            if (scr > $intro.offset().top - 1 && scr < $intro.next().offset().top - 1) {
                 $('#quickMenu a[href="#scroll_intro"]').closest('li').addClass('on').siblings().removeClass('on');
             }
-            if (scr > $sale.offset().top - 1 && scr < $sale.next().offset().top) {
+            if (scr > $sale.offset().top - 1 && scr < $sale.next().offset().top - 1) {
                 $('#quickMenu a[href="#scroll_sale"]').closest('li').addClass('on').siblings().removeClass('on');
             }
-            if (scr > $place.offset().top - 1 && scr < $place.next().offset().top) {
-                $('#quickMenu a[href="#scroll_place"]').closest('li').addClass('on').siblings().removeClass('on');
+            if (scr > $premier.offset().top - 1 && scr < $premier.next().offset().top - 1) {
+                $('#quickMenu a[href="#scroll_premier"]').closest('li').addClass('on').siblings().removeClass('on');
             }
-            if (scr > $type.offset().top - 1 && scr < $type.next().offset().top) {
+            if (scr > $type.offset().top - 1 && scr < $type.next().offset().top - 1) {
                 $('#quickMenu a[href="#scroll_type"]').closest('li').addClass('on').siblings().removeClass('on');
             }
-            if (scr > $plan.offset().top - 1 && scr < $plan.next().offset().top) {
+            if (scr > $plan.offset().top - 1 && scr < $plan.next().offset().top - 1) {
                 $('#quickMenu a[href="#scroll_plan"]').closest('li').addClass('on').siblings().removeClass('on');
             }
             if (scr > $location.offset().top - 1) {

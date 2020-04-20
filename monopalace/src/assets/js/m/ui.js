@@ -150,6 +150,7 @@ var landingInquiry = {
         this.scroll();
         this.inquiryPrettyPhoto();
         this.premierPictureList();
+        this.navLink();
     },
     scroll: function () {
         // var gnb = $('#gnb');
@@ -157,39 +158,39 @@ var landingInquiry = {
         // var headerHt = gnb.outerHeight();
         // console.log(headerHt);
         var isQuickShow = false;
-        var isNavBarShow = false;
+        var isNavbarShow = false;
         var $btmRtShortcut = $('#btmRtShortcut');
         var $bottombarWrapper = $('#bottombarWrapper');
-        var $navBar = $('#navBar');
+        var $navbar = $('#navbar');
         $(window).on('scroll', function () {
             var scr = $(window).scrollTop();
-            var introOffsetTop = $('#scroll_intro').offset().top;
-            if (scr > introOffsetTop) {
+            var quickShotTop = $('main .inquiry-visual-sec').offset().top + $('main .inquiry-visual-sec').outerHeight() - 1;
+            if (scr > quickShotTop) {
                 // isQuickShow = true;
                 if (!isQuickShow) {
                     isQuickShow = true;
-                    $btmRtShortcut.fadeToggle('fast');
+                    // $btmRtShortcut.fadeToggle('fast');
                     $bottombarWrapper.fadeToggle('fast');
                 }
             } else {
                 if (isQuickShow) {
                     isQuickShow = false;
-                    $btmRtShortcut.fadeToggle('fast');
+                    // $btmRtShortcut.fadeToggle('fast');
                     $bottombarWrapper.fadeToggle('fast');
                 }
             }
             var mainOffsetTop = $('main#container').offset().top;
             if (scr > mainOffsetTop) {
-                if (!isNavBarShow) {
-                    isNavBarShow = true;
-                    $navBar.toggle();
-                    $navBar.toggleClass('affix');
-                    $navBar.fadeToggle('fast');
+                if (!isNavbarShow) {
+                    isNavbarShow = true;
+                    $navbar.toggle();
+                    $navbar.toggleClass('affix');
+                    $navbar.fadeToggle('fast');
                 }
             } else {
-                if (isNavBarShow) {
-                    isNavBarShow = false;
-                    $navBar.toggleClass('affix');
+                if (isNavbarShow) {
+                    isNavbarShow = false;
+                    $navbar.toggleClass('affix');
                 }
             }
         });
@@ -222,10 +223,21 @@ var landingInquiry = {
             centerPadding: '45px',
             infinite: false,
             dots: true,
-            prevArrow: '',
-            nextArrow: '',
+            appendArrows: '#bannerArrow',
+            prevArrow: '<button type="button" class="slick-prev"><img src="http://img.monopalace.com/m/landing/inquiry/premier/btn_left.png" alt="이전"></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="http://img.monopalace.com/m/landing/inquiry/premier/btn_right.png" alt="다음"></button>'
         });
     },
+    navLink: function() {
+        var $navbar = $('#navbar');
+        var $mainNav = $('#mainNav');
+        $navbar.find('.main-nav > .menu > li > a, .allmenu > .menu-list > a').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: $($(this).attr('href')).offset().top - $mainNav.outerHeight()
+            }, 0);
+        });
+    }
 }
 
 var targetHide = {

@@ -5,9 +5,10 @@
 $c-inquiry-brown: #b08f51;
 $c-inquiry-blue: #0046b7;
 $c-inquiry-blue-dark: #182668;
-$c-inquiry-red: #ec0000;
-$c-inquiry-red-dark: #c2063f;
+$c-inquiry-red: #ff3c45;
+$c-inquiry-red-dark: #df000b;
 $c-inquiry-purple: #cc0099;
+$c-inquiry-yellow: #ffdb49;
 
 body {
     font-family: $font-stack;
@@ -69,6 +70,10 @@ footer {
         color: $c-inquiry-purple !important;
     }
 
+    .c-yellow {
+        color: $c-inquiry-yellow !important;
+    }
+
 
     .wrapper {
         min-width: 1900px;
@@ -120,7 +125,7 @@ footer {
             .gnb-area {
                 height: 100%;
 
-                .nav-bar {
+                .navbar {
                     // @include flt(right);
                     // right: 20px;
                     position: relative;
@@ -388,15 +393,26 @@ footer {
                         vertical-align: middle;
                     }
 
-                    .x {
+                    .x-cover {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
                         background-color: #898989;
-                        color: #ffffff;
-                        font-size: 18px;
-                        font-weight: 100;
+                        width: 20px;
+                        height: 20px;
+
+                        .x {
+                            position: relative;
+                            top: -3px;
+                            color: #ffffff;
+                            font-size: 30px;
+                            font-weight: 100;
+                            line-height: 1;
+                        }
                     }
 
                     .txt {
-                        margin-left: 8px;
+                        margin-left: 5px;
                         top: -1px;
                         color: #555555;
                     }
