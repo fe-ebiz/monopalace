@@ -64,7 +64,7 @@
                 <div class="group-f gnb-area">
                     <div class="logo-bar">
                         <h1 id="logo-cover" class="logo-cover">
-                            <a href="/" class="logo">
+                            <a href="javascript:;" class="logo">
                                 <img src="http://img.monopalace.com/landing/inquiry/logo.png" alt="모노팰리스" class="logo-img">
                             </a>
                         </h1>
@@ -749,22 +749,22 @@
         <div class="modal modal-mask scale-no inquiry-modal" role="dialog" aira-modal="true" tabindex="-1">
             <div class="modal-wrapper">
                 <div class="modal-container">
-                    <form action="">
+                    <form action="./inquiry_action.php" method="post">
                         <div class="modal-header">
                             <img src="http://img.monopalace.com/landing/inquiry/modal/inquiry_title.png" alt="모노팰리스 분양문의">
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label>이름</label>
-                                <input type="text" class="form-input name">
+                                <input name="name" type="text" class="form-input name">
                             </div>
                             <div class="form-group">
                                 <label>연락처</label>
-                                <input type="text" class="form-input phone" placeholder="- 없이 입력해주세요.">
+                                <input name="phone" type="text" class="form-input phone" placeholder="- 없이 입력해주세요.">
                             </div>
                             <div class="form-group">
                                 <label>문의내용</label>
-                                <textarea name="" id="" cols="30" rows="10" class="form-textarea" placeholder="문의사항을 간략하게 작성해주시면 전화로 안내드리겠습니다."></textarea>
+                                <textarea name="content" cols="30" rows="10" class="form-textarea" placeholder="문의사항을 간략하게 작성해주시면 전화로 안내드리겠습니다."></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">

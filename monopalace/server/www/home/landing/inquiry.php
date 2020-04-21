@@ -261,7 +261,7 @@ $arrMobileAgent = array('iPhone','Mobile','UP.Browser','Android','BlackBerry','W
             <div id="gnb" class="gnb">
                 <div class="group-f gnb-area">
                     <h1 id="logo-cover" class="logo-cover">
-                        <a href="/" class="logo">
+                        <a href="javascript:;" class="logo">
                             <img src="http://img.monopalace.com/landing/inquiry/logo.png" alt="모노팰리스" class="logo-img">
                         </a>
                     </h1>
