@@ -33,6 +33,31 @@ function bSync() {
     });
 };
 
+
+function bSyncLanding() {
+    browserSync.init({
+        // watch: true,
+        port: 3030,
+        startPath: './landing/inquiry.html',
+        server: {
+            baseDir: './dist'
+        }
+    });
+};
+
+
+function bSyncLandingM() {
+    browserSync.init({
+        // watch: true,
+        port: 3030,
+        startPath: '/m/landing/inquiry.html',
+        server: {
+            baseDir: './dist'
+        }
+    });
+};
+
+
 function bSyncTest() {
     browserSync.init({
         port: 3050,
@@ -301,6 +326,10 @@ exports.testPathLocal = testPathLocal;
 exports.default = parallel(bSync, watching);
 exports.serve = parallel(series(parallel(template, templateM), sassDev, css, js, img, etc, bSync), watching);
 exports.build = parallel(series(parallel(template, templateM), sassDev, css, js, img, etc, bSync), watching);
+
+exports.land = parallel(series(parallel(template, templateM), sassDev, css, js, img, etc, bSyncLanding), watching);
+exports.landM = parallel(series(parallel(template, templateM), sassDev, css, js, img, etc, bSyncLandingM), watching);
+
 exports.buildNoImg = parallel(series(parallel(template, templateM), sassDev, css, js, etc, bSync), watching);
 exports.default = parallel(bSync, watching);
 exports.test = series(parallel(template, templateM), sassPrd, css, js, img, etc, copyTest, testPathServer, bSyncTest);

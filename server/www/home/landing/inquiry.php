@@ -860,6 +860,7 @@ $arrMobileAgent = array('iPhone','Mobile','UP.Browser','Android','BlackBerry','W
             </div>
         </div>
 
+        <!--//////개발 완료 후 삭제 부분/////-->
         <div class="bottombar-wrapper" id="bottombarWrapper" style="display: none">
             <div class="title-area">
                 <div class="lg-wd">
@@ -871,6 +872,56 @@ $arrMobileAgent = array('iPhone','Mobile','UP.Browser','Android','BlackBerry','W
                 <img src="http://img.monopalace.com/landing/inquiry/bottombar_inquiry_number.png" alt="분양문의 041 585 0003">
             </div>
         </div>
+        <!--//////작업 완료 후 삭제 부분 끝/////-->
+
+        <!--=======[ 신청하기] ======-->
+        <!-- <div class="bottombar-wrap" id="bottombarWrapper" style="display: none">
+            <div class="request-area">
+                <div class="request-box">
+                    <div class="title-logo"><img src="http://img.monopalace.com/landing/inquiry/request/request_logo.png" alt="로고"></div>
+                    <div class="request-contents">
+                        <div class="request-ment"><img src="http://img.monopalace.com/landing/inquiry/request/request_ment.png" alt="타이틀 문구"></div>
+                        <form class="form-info-box">
+                            <p class="input-title">빠른 상담신청 :</p>
+                            <div class="input-box">
+                                <input type="text" placeholder="*이름">
+                                <input type="text" placeholder="*전화번호">
+                                <input type="text" placeholder="이메일주소">
+                                <div class="agree-policy-box">
+                                    <div class="agree-box">
+                                        <input type="checkbox" id="agreeCheck" class="agree-check">
+                                        <label for="agreeCheck" class="agree-label">개인정보 취급방침 동의</label>
+                                        <button type="button" class="btn-show-policy">자세히 보기<span class="icon-arrow-down"> ▽</span><span class="icon-arrow-up"> △</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn-request"><img src="http://img.monopalace.com/landing/inquiry/request/btn_request.gif" alt="신청하기 버튼"></button>
+                        </form>
+                        <div class="txt-policy-box">
+                            <ul class="txt-policy-ul">
+                            <li>
+                                <p class="p-name"><span>수집 및이용목적</span></p>
+                                <p class="p-contents"><span>상담 및 서비스 제공,<br>개인정보 제3자 제공</span></p>
+                            </li>
+                            <li>
+                                    <p class="p-name"><span>수집하는 항목</span></p>
+                                    <p class="p-contents"><span>이름, 전화번호,<br>이메일</span></p>
+                                </li>
+                                <li>
+                                    <p class="p-name"><span>보요/이용기간</span></p>
+                                    <p class="p-contents"><span class="span-center">1년</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="number-area">
+                <img src="http://img.monopalace.com/landing/inquiry/bottombar_inquiry_number.png" alt="분양문의 041 585 0003">
+            </div>
+        </div> -->
+        <!--=======[ ./ 신청하기 끝] ======-->        
 
         <aside class="quick-menu" id="quickMenu" style="display: none">
             <h2 class="logo"><img src="http://img.monopalace.com/landing/inquiry/logo.png" alt="모노팰리스"></h2>
@@ -940,6 +991,21 @@ $arrMobileAgent = array('iPhone','Mobile','UP.Browser','Android','BlackBerry','W
 
     <!--[if lt IE 9]><script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
+    <script>
+        //신청하기 부분 관련
+        $(document).ready(function(){
+            //자세히 보기 버튼
+            $('.btn-show-policy').on('click',function(){
+                $('.txt-policy-box').toggle();
+                $('.btn-show-policy .icon-arrow-up').toggle();
+                $('.btn-show-policy .icon-arrow-down').toggle();
+                $('.btn-show-policy').toggleClass("under-bar-hidden");
+                $('.request-contents .request-ment').toggleClass("ment-margin-control");
+                
+            })
+            // console.log("헬로우");
+        });
+    </script>
 </body>
 
 </html>
